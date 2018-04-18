@@ -3,7 +3,7 @@ ile_dokumentow = 3
 dokumenty= []
 dokumenty.append("Your care set up, do not pluck my cARe down")
 dokumenty.append("Tralalala")
-dokumenty.append("Your CARE is gain of Care when new care iS won.")
+dokumenty.append("tralalaalal")
 ile_zapytan = 2
 zapytania = []
 zapytania.append('care')
