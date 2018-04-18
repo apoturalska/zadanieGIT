@@ -1,0 +1,1 @@
+Ooo to nowy plik Python!
