@@ -1,7 +1,7 @@
 import string
 ile_dokumentow = 3
 dokumenty= []
-dokumenty.append("Your care set up, do not pluck my cARe down")
+dokumenty.append("Dodalam sobie nowa galaz")
 dokumenty.append("My care, is loss of caRe with old care done.")
 dokumenty.append("Your CARE is gain of Care when new care iS won.")
 ile_zapytan = 2
