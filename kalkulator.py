@@ -36,3 +36,4 @@ for zap in zapytania:
         print(wynik)
     else:
         print([])
+		print("Kolejna zmiana?!!")
