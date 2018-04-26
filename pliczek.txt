@@ -1,1 +1,37 @@
-hejka 
+class Pracownik:
+    def __init__(self, imie, placa):
+        self.imie = imie
+        self.placa = placa
+
+    def obliczenia(self):
+        placa = self.placa
+        skladka1 = sum([round(0.0976 * placa, 2)])
+        skladka2 = sum([round(0.015 * placa, 2)])
+        skladka3 = sum([round(0.0245 * placa, 2)])
+        skladki = skladka1+skladka2+skladka3
+        podstawa = placa - skladki
+        zdrowotna = round(podstawa * 0.09, 2)
+        zaliczka = round(round((podstawa - 111.25) * 0.18, 2) - 46.33 - round(podstawa * 0.0775, 2))
+        netto = round(podstawa - zdrowotna - zaliczka, 2)
+        prac1 = sum([round(0.0976 * placa, 2)])
+        prac2 = sum([round(0.065 * placa, 2)])
+        prac3 = sum([round(0.0245 * placa, 2)])
+        prac4 = sum([round(0.001 * placa, 2)])
+        prac5 = sum([round(0.0193 * placa, 2)])
+        pracodawca = round(prac1+prac2+prac3+prac4+prac5, 2)
+        lacznie=placa + pracodawca
+        return (netto, pracodawca,lacznie)
+
+
+wszystko = 0
+n = int(input())
+for i in range(n):
+    dane = input().split(' ')
+    imie = str(dane[0])
+    placa = int(dane[1])
+    pracownik = Pracownik(imie, placa)
+    (netto, pracodawca, lacznie) = pracownik.obliczenia()
+    wszystko = lacznie + wszystko
+    print("%s %.2f %.2f %.2f" % (imie, netto, pracodawca, lacznie))
+print("%.2f" % (wszystko))
+
